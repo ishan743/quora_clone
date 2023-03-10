@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'users/new'
+  get 'users/create'
+  get 'users/show'
+  get 'comments/create'
+  get 'comments/destroy'
   # get 'posts/index'
   # get 'posts/show'
   # get 'posts/new'
@@ -13,6 +18,7 @@ Rails.application.routes.draw do
       post :like
       post :dislike
     end
+    resources :comments, only: [:create, :destroy]
   end
   
   root 'posts#index'
