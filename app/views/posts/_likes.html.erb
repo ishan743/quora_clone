@@ -1,0 +1,8 @@
+<div class="likes">
+  <span class="likes-count"><%= post.likes %> Likes</span>
+
+  <%= button_to "Like", like_post_path(post), method: :post, remote: true, class: "like-button" %>
+  <span class="dislikes-count"><%= post.dislikes %> Dislikes</span>
+  <%= button_to "Dislike", dislike_post_path(post), method: :post, remote: true, class: "dislike-button" %>
+
+</div>

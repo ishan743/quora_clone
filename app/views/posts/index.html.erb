@@ -1,0 +1,11 @@
+<h1>Threads</h1>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <%= post.content %>
+      <%= render 'likes', post: post %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Post", new_post_path %>
